@@ -1,10 +1,10 @@
 # Exercise: Jobs & CronJobs - Workload Management
 
-## 📌 Problem Statement
+## Problem Statement
 
 Run containerized workloads to completion (Jobs) and on schedule (CronJobs). Learn how to handle batch processing, parallel execution, and scheduled tasks in Kubernetes.
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 By completing this exercise, you will be able to:
 
@@ -16,7 +16,7 @@ By completing this exercise, you will be able to:
 6. Clean up completed Jobs
 7. Understand Job controller patterns
 
-## 📝 Exercises
+## Exercises
 
 ### Exercise 1.1: Simple Job
 
@@ -593,9 +593,9 @@ parallelism: 1 # Just run once
 
 ---
 
-## 💡 Best Practices
+## Best Practices
 
-✅ **DO:**
+DO:
 
 - Always set `restartPolicy: Never` for Jobs (unless special case)
 - Set appropriate `backoffLimit` (usually 3-6)
@@ -603,7 +603,7 @@ parallelism: 1 # Just run once
 - Set `successfulJobsHistoryLimit` to avoid clutter
 - Monitor CronJob status regularly
 
-❌ **DON'T:**
+DON'T:
 
 - Use Jobs for always-running services (use Deployment)
 - Set extremely large parallelism (overload cluster)
@@ -613,7 +613,7 @@ parallelism: 1 # Just run once
 
 ---
 
-## ✅ Exercise Completion Checklist
+## Exercise Completion Checklist
 
 - [ ] Created simple Job to completion
 - [ ] Observed Job retry mechanism
@@ -633,6 +633,6 @@ parallelism: 1 # Just run once
 
 Once complete, move to **Module 04** (`04-expert-security/rbac/exercise.md`) to learn access control.
 
-## 📚 Reference Templates
+## Reference Templates
 
 Check `/templates/job-template.yaml` and `/templates/cronjob-template.yaml` for boilerplate.

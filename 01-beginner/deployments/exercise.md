@@ -1,10 +1,10 @@
 # Exercise: Deployments - Declarative Pod Management
 
-## 📌 Problem Statement
+## Problem Statement
 
 Create and manage Deployments - the standard way to run applications in Kubernetes. You'll learn how Deployments ensure high availability, handle updates, and automatically manage underlying ReplicaSets. This is the most common resource in practice.
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 By completing this exercise, you will be able to:
 
@@ -15,7 +15,7 @@ By completing this exercise, you will be able to:
 5. Rollback a failed deployment
 6. Monitor Deployment status and events
 
-## 📝 Exercises
+## Exercises
 
 ### Exercise 2.1: Create a Basic Deployment
 
@@ -417,7 +417,7 @@ Example: 3 replicas, maxUnavailable=1, maxSurge=1
 
 ---
 
-## 💡 Debugging Tips
+## Debugging Tips
 
 | Issue                                | Solution                                                  |
 | ------------------------------------ | --------------------------------------------------------- |
@@ -429,7 +429,7 @@ Example: 3 replicas, maxUnavailable=1, maxSurge=1
 
 ---
 
-## ✅ Exercise Completion Checklist
+## Exercise Completion Checklist
 
 - [ ] Created Deployment with 3 replicas
 - [ ] Verified ReplicaSet creates Pods
@@ -448,6 +448,6 @@ Example: 3 replicas, maxUnavailable=1, maxSurge=1
 
 Once complete, move to `services/exercise.md` to learn how to expose Deployments to clients.
 
-## 📚 Reference Templates
+## Reference Templates
 
 Check `/templates/deployment-template.yaml` for boilerplate structure.

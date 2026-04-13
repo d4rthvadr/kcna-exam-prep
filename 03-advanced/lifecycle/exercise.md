@@ -1,10 +1,10 @@
 # Exercise: Pod Lifecycle - Health Checks and Initialization
 
-## 📌 Problem Statement
+## Problem Statement
 
 Manage Pod lifecycle from creation to termination. You'll implement health checks to ensure Pods only receive traffic when ready, use init containers for setup, and configure lifecycle hooks for graceful handling of events.
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 By completing this exercise, you will be able to:
 
@@ -15,7 +15,7 @@ By completing this exercise, you will be able to:
 5. Understand Pod phase transitions
 6. Debug probe failures and restart loops
 
-## 📝 Exercises
+## Exercises
 
 ### Exercise 1.1: Liveness Probe (HTTP)
 
@@ -713,9 +713,9 @@ curl http://localhost:8080/alive
 
 ---
 
-## 💡 Best Practices
+## Best Practices
 
-✅ **DO:**
+DO:
 
 - Implement both liveness and readiness probes
 - Use readiness probe stricter than liveness (avoid restart loops)
@@ -723,7 +723,7 @@ curl http://localhost:8080/alive
 - Use startup probe for slow-starting apps
 - Use preStop hooks for graceful shutdown
 
-❌ **DON'T:**
+DON'T:
 
 - Make liveness probe too aggressive (constant restarts)
 - Forget initialDelaySeconds (probe runs too early)
@@ -733,7 +733,7 @@ curl http://localhost:8080/alive
 
 ---
 
-## ✅ Exercise Completion Checklist
+## Exercise Completion Checklist
 
 - [ ] Implemented HTTP liveness probe
 - [ ] Implemented readiness probe
@@ -752,6 +752,6 @@ curl http://localhost:8080/alive
 
 Once complete, move to `cronjobs/exercise.md` to learn about workload management.
 
-## 📚 Reference Templates
+## Reference Templates
 
 Check deployment template with probe examples in `/templates/deployment-template.yaml`.

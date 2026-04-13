@@ -6,7 +6,7 @@
 **Prerequisites:** Module 01 completed  
 **KCNA Alignment:** Container Orchestration (46%), Cloud Native Architecture (16%)
 
-## 📚 Learning Objectives
+## Learning Objectives
 
 By completing this module, you will:
 
@@ -17,14 +17,14 @@ By completing this module, you will:
 - Inject configuration and secrets into Pods
 - Understand volume lifecycle and data persistence
 
-## 📂 Exercise Breakdown
+## Exercise Breakdown
 
 | Exercise                | Topics                                                                 | Time  |
 | ----------------------- | ---------------------------------------------------------------------- | ----- |
 | **configmaps-secrets/** | ConfigMaps, Secrets, environment variables, volume mounting            | 1 day |
 | **storage/**            | PersistentVolumes, PersistentVolumeClaims, StatefulSets, local storage | 1 day |
 
-## 🎯 Key Concepts
+## Key Concepts
 
 ### ConfigMaps
 
@@ -54,14 +54,14 @@ By completing this module, you will:
 - Enables persistent storage per Pod
 - Suitable for databases, caches, message queues (but limited in Kubernetes learning)
 
-## 🚀 Getting Started
+## Getting Started
 
 1. Complete configmaps-secrets exercises first (configuration fundamentals)
 2. Move to storage exercises (builds on configuration knowledge)
 3. Deploy StatefulSet only after understanding PVC and storage concepts
 4. Test each concept independently before combining
 
-## 💡 Tips
+## Tips
 
 - **ConfigMaps first** - Start with environment variables, then progress to volume mounting
 - **Secrets are encoded, not encrypted** - Understand the security implications
@@ -69,7 +69,7 @@ By completing this module, you will:
 - **Local storage limitations** - Understand why local storage isn't suitable for production
 - **Cleanup PVCs carefully** - By default PVCs are retained when Pods delete
 
-## 📖 Useful Commands (See cheatsheet.md for more)
+## Useful Commands (See cheatsheet.md for more)
 
 ```bash
 # ConfigMaps and Secrets
@@ -91,7 +91,7 @@ kubectl get pod -l app=web    # Find pods by label
 kubectl delete statefulset <name> --cascade=foreground  # Delete StatefulSet with Pods
 ```
 
-## ✅ Module Completion Checklist
+## Module Completion Checklist
 
 - [ ] Created ConfigMaps and used them in Pods
 - [ ] Created Secrets and injected them as environment variables

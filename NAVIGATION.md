@@ -340,7 +340,7 @@ A: Use failed domains guide in [exam-tips.md](exam-tips.md). Spend extra time on
 
 This repository was designed based on feedback from successful KCNA exam takers. Key patterns:
 
-- **Hands-on > Reading**: Actually running exercises > reading theory
+- **Hands-on > Reading**: Running exercises beats reading theory alone
 - **Exercise Repetition**: Doing exercise twice teaches better than once
 - **Debugging Skills**: Being able to diagnose issues is 80% of exam
 - **Concept Understanding**: Knowing "why" not just "how"
@@ -394,4 +394,4 @@ This repository was designed based on feedback from successful KCNA exam takers.
 
 → **Begin with**: [README.md](README.md) or jump to your experience level path above.
 
-Good luck with KCNA! 🚀
+Start your KCNA preparation today.

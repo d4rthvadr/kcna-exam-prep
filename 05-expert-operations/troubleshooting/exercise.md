@@ -634,7 +634,7 @@ spec:
 ```bash
 # Try to apply
 kubectl apply -f pod-bad-config.yaml
-# Error: error validating data... unknown field...
+# Error: error validating data: unknown field
 ```
 
 3. Use dry-run for client-side validation:

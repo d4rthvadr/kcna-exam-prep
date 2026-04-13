@@ -6,7 +6,7 @@
 **Prerequisites:** Module 01-04 completed  
 **KCNA Alignment:** Container Orchestration (46%), Cloud Native Observability (8%), Cloud Native Application Delivery (5%)
 
-## 📚 Learning Objectives
+## Learning Objectives
 
 By completing this module, you will:
 
@@ -18,7 +18,7 @@ By completing this module, you will:
 - Troubleshoot deployment, scaling, and application issues
 - Understand cloud-native observability patterns
 
-## 📂 Exercise Breakdown
+## Exercise Breakdown
 
 | Exercise             | Topics                                                                     | Time    |
 | -------------------- | -------------------------------------------------------------------------- | ------- |
@@ -27,7 +27,7 @@ By completing this module, you will:
 | **metrics/**         | metrics-server, custom metrics, monitoring setup                           | 0.5 day |
 | **troubleshooting/** | Common issues, debugging techniques, log analysis                          | 1 day   |
 
-## 🎯 Key Concepts
+## Key Concepts
 
 ### Deployment Strategies
 
@@ -118,7 +118,7 @@ By completing this module, you will:
 - Check: NetworkPolicy rules
 - Test: curl from pod to service
 
-## 🚀 Getting Started
+## Getting Started
 
 1. Start with rollouts (deployment strategies and updates)
 2. Progress to scaling exercises
@@ -126,7 +126,7 @@ By completing this module, you will:
 4. Work through troubleshooting scenarios
 5. Combine all concepts in complex scenarios
 
-## 💡 Tips
+## Tips
 
 - **Test strategy first** - Understand rolling updates before attempting blue-green
 - **Metrics require setup** - Install metrics-server first for HPA to work
@@ -134,7 +134,7 @@ By completing this module, you will:
 - **Logs are your friend** - Always check logs first when debugging
 - **Use kubectl describe** - Often shows recent events that explain issues
 
-## 📖 Useful Commands (See cheatsheet.md for more)
+## Useful Commands (See cheatsheet.md for more)
 
 ```bash
 # Deployment info
@@ -166,7 +166,7 @@ kubectl exec -it <pod> -- /bin/sh
 kubectl port-forward svc/<service> 8080:80
 ```
 
-## ✅ Module Completion Checklist
+## Module Completion Checklist
 
 - [ ] Implemented rolling update deployment strategy
 - [ ] Successfully rolled back a failed deployment

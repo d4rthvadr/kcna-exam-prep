@@ -1,10 +1,10 @@
 # Exercise: ConfigMaps & Secrets - Application Configuration
 
-## 📌 Problem Statement
+## Problem Statement
 
 Manage application configuration and sensitive data in Kubernetes. ConfigMaps store non-sensitive configuration while Secrets store sensitive data like passwords and tokens. You'll learn to inject configuration into Pods using environment variables and volume mounts.
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 By completing this exercise, you will be able to:
 
@@ -17,7 +17,7 @@ By completing this exercise, you will be able to:
 7. Update configuration without redeploying
 8. Understand security implications of Secrets
 
-## 📝 Exercises
+## Exercises
 
 ### Exercise 1.1: Create ConfigMap (Literal)
 
@@ -396,7 +396,7 @@ kubectl exec secret-volume-pod -- stat /etc/secrets/database-password
 
 ### Exercise 1.7: Update ConfigMap and Observe Impact
 
-**Objective:** Understand that Pod env vars don't update automatically, but volumes do.
+**Objective:** Pod env vars don't update automatically, but volumes do.
 
 **Instructions:**
 
@@ -588,9 +588,9 @@ kubectl create configmap name --from-file=/path/to/dir/
 
 ---
 
-## 💡 Security Best Practices
+## Security Best Practices
 
-✅ **DO:**
+DO:
 
 - Use Secrets for sensitive data (passwords, API keys, certificates)
 - Use RBAC to limit who can read Secrets
@@ -599,7 +599,7 @@ kubectl create configmap name --from-file=/path/to/dir/
 - Keep secrets out of version control
 - Use temporary credentials when possible
 
-❌ **DON'T:**
+DON'T:
 
 - Store secrets in ConfigMaps (no encryption)
 - Commit secrets to git
@@ -610,7 +610,7 @@ kubectl create configmap name --from-file=/path/to/dir/
 
 ---
 
-## ✅ Exercise Completion Checklist
+## Exercise Completion Checklist
 
 - [ ] Created ConfigMap with literal key-value pairs
 - [ ] Injected ConfigMap as environment variables
@@ -630,6 +630,6 @@ kubectl create configmap name --from-file=/path/to/dir/
 
 Once complete, move to `storage/exercise.md` to learn about persistent data storage.
 
-## 📚 Reference Templates
+## Reference Templates
 
 Check `/templates/configmap-template.yaml` and `/templates/secret-template.yaml` for boilerplate.

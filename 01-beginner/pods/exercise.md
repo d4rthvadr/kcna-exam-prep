@@ -1,10 +1,10 @@
 # Exercise: Pods - Fundamentals
 
-## 📌 Problem Statement
+## Problem Statement
 
 Create and manage individual Pods in Kubernetes. This exercise covers the basics of Pod lifecycle, multi-container Pods, and debugging techniques. You'll learn that Pods are ephemeral and how to inspect their state using kubectl.
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 By completing this exercise, you will be able to:
 
@@ -15,7 +15,7 @@ By completing this exercise, you will be able to:
 5. Understand Pod lifecycle and restart policies
 6. Clean up Pods properly
 
-## 📝 Exercises
+## Exercises
 
 ### Exercise 1.1: Create a Simple Pod
 
@@ -56,9 +56,10 @@ kubectl get pod nginx-simple -o yaml | grep -A 5 status
 - Container ready count is 1/1
 
 **Success Criteria:**
-✅ Pod is in "Running" state  
-✅ Container is "Ready"  
-✅ No restart count (restarts should be 0)
+
+- Pod is in "Running" state
+- Container is "Ready"
+- No restart count (restarts should be 0)
 
 ---
 
@@ -103,7 +104,7 @@ kubectl logs nginx-simple --previous
 **Instructions:**
 
 1. Connect to the nginx Pod
-2. Check nginx is actually running inside
+2. Check nginx is running inside
 3. Test curl to localhost:80 from inside Pod
 4. Exit the Pod connection
 
@@ -222,7 +223,7 @@ kubectl logs crash-demo --all-containers=true
 
 - Pod starts, runs for 5 seconds, exits with error code 1
 - Status shows "CrashLoopBackOff" (backing off from constant restarts)
-- Restart count increases (0, 1, 2, 3...)
+- Restart count increases (0, 1, 2, 3, and beyond)
 - `kubectl describe` shows multiple "Killing container" events
 - kubelet exponentially backs off restart attempts (5s, 10s, 20s, 40s, 80s, 160s)
 
@@ -302,7 +303,7 @@ kubectl get pods
 
 ---
 
-## 💡 Debugging Tips
+## Debugging Tips
 
 | Issue                | Command to Debug                                      |
 | -------------------- | ----------------------------------------------------- |
@@ -314,7 +315,7 @@ kubectl get pods
 
 ---
 
-## ✅ Exercise Completion Checklist
+## Exercise Completion Checklist
 
 - [ ] Created and ran nginx-simple Pod
 - [ ] Viewed logs with `kubectl logs`
@@ -332,6 +333,6 @@ kubectl get pods
 
 Once complete, move to `deployments/exercise.md` to learn how Deployments manage Pods reliably.
 
-## 📚 Reference Templates
+## Reference Templates
 
 Check `/templates/pod-template.yaml` for boilerplate structure.

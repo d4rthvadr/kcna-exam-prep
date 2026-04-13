@@ -279,7 +279,7 @@ kubectl get pods --all-namespaces
 kubectl apply -f resource.yaml -n <namespace>
 ```
 
-## 📝 Resource Management
+## Resource Management
 
 ```bash
 # Viewing resource definitions
@@ -301,7 +301,7 @@ kubectl apply -f file.yaml --dry-run=client
 kubectl apply -f file.yaml --dry-run=server
 ```
 
-## 🔍 Common Troubleshooting Patterns
+## Common Troubleshooting Patterns
 
 ```bash
 # Pod won't start

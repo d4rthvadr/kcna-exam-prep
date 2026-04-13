@@ -1,10 +1,10 @@
 # Exercise: Services - Exposing Applications
 
-## 📌 Problem Statement
+## Problem Statement
 
 Create and manage Services to expose Pods and Deployments. Services provide stable networking, DNS names, and load balancing for accessing applications. You'll learn the three main Service types and how they differ for different use cases.
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 By completing this exercise, you will be able to:
 
@@ -15,7 +15,7 @@ By completing this exercise, you will be able to:
 5. Understand DNS names for service discovery
 6. Debug service connectivity issues
 
-## 📝 Exercises
+## Exercises
 
 ### Exercise 3.1: ClusterIP Service (Default)
 
@@ -530,7 +530,7 @@ DNS is preferred (service can be created after pods).
 
 ---
 
-## 💡 Debugging Tips
+## Debugging Tips
 
 | Issue                    | Debug Command                                                    |
 | ------------------------ | ---------------------------------------------------------------- |
@@ -543,7 +543,7 @@ DNS is preferred (service can be created after pods).
 
 ---
 
-## ✅ Exercise Completion Checklist
+## Exercise Completion Checklist
 
 - [ ] Created ClusterIP service and tested internal access
 - [ ] Created NodePort service and tested from outside cluster
@@ -562,6 +562,6 @@ DNS is preferred (service can be created after pods).
 
 Once complete, move to **Module 02** (`02-intermediate/configmaps-secrets/exercise.md`) to learn configuration management.
 
-## 📚 Reference Templates
+## Reference Templates
 
 Check `/templates/service-template.yaml` for boilerplate with all three service types.

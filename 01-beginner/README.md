@@ -6,7 +6,7 @@
 **Prerequisites:** kubectl basics, cluster access  
 **KCNA Alignment:** Kubernetes Fundamentals (25%)
 
-## 📚 Learning Objectives
+## Learning Objectives
 
 By completing this module, you will:
 
@@ -17,7 +17,7 @@ By completing this module, you will:
 - Understand ReplicaSets and how Deployments manage them
 - Use labels and selectors to organize resources
 
-## 📂 Exercise Breakdown
+## Exercise Breakdown
 
 | Exercise         | Topics                                                       | Time  |
 | ---------------- | ------------------------------------------------------------ | ----- |
@@ -25,7 +25,7 @@ By completing this module, you will:
 | **deployments/** | Deployment creation, replicas, updates, rollbacks            | 1 day |
 | **services/**    | Service types, port mapping, DNS discovery, load balancing   | 1 day |
 
-## 🎯 Key Concepts
+## Key Concepts
 
 ### Pods
 
@@ -54,7 +54,7 @@ By completing this module, you will:
 - Services use selectors to route traffic to Pods
 - Enable filtering and grouping resources by concern
 
-## 🚀 Getting Started
+## Getting Started
 
 1. Navigate to each exercise subdirectory
 2. Read the exercise.md file
@@ -62,15 +62,15 @@ By completing this module, you will:
 4. Deploy and verify using kubectl commands
 5. Move to next exercise once verified
 
-## 💡 Tips
+## Tips
 
 - **Use templates** - Check `/templates` for Pod, Deployment, Service skeletons
-- **Name your files clearly** - e.g., `nginx-pod.yaml`, `my-deployment.yaml`
+- **Name your files well** - e.g., `nginx-pod.yaml`, `my-deployment.yaml`
 - **Test incrementally** - Deploy one resource at a time, verify, then build on it
 - **Use `-v 8` flag** - `kubectl apply -f <file> -v 8` shows detailed execution details
 - **Keep it clean** - Delete resources after verification: `kubectl delete -f <file>`
 
-## 📖 Useful Commands (See cheatsheet.md for more)
+## Useful Commands (See cheatsheet.md for more)
 
 ```bash
 # Create resources
@@ -97,7 +97,7 @@ kubectl delete -f pod.yaml
 kubectl delete pod <pod-name>
 ```
 
-## ✅ Module Completion Checklist
+## Module Completion Checklist
 
 - [ ] Completed all exercises in pods/
 - [ ] Completed all exercises in deployments/

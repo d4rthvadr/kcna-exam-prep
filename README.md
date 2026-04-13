@@ -216,6 +216,4 @@ Solutions are validated by:
 
 ---
 
-**Good luck with your KCNA exam preparation!**
-
-Start with **01-beginner/README.md** for module-specific guidance.
+Start with [01-beginner/README.md](01-beginner/README.md) for module-specific guidance.

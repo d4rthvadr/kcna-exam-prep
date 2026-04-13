@@ -882,7 +882,7 @@ kubectl get networkpolicy --all-namespaces
    - Implement default-deny for security-sensitive namespaces
    - Use selectors instead of CIDR for internal pods (labels are more maintainable)
    - Allow DNS (port 53 UDP) when restricting egress
-   - Document traffic expectations clearly
+   - Document traffic expectations
    - Test policies before rolling out
 
 5. **Common Patterns**:

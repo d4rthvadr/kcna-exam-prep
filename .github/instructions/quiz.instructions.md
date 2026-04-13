@@ -62,7 +62,7 @@ Based on user input, set:
 **For Practice Mode:**
 
 ```
-✅ Correct!
+Correct!
 Concept: Service discovery in Kubernetes
 Your understanding: Strong on this topic
 Related exercise: Module 02 - Services exercise 3
@@ -73,7 +73,7 @@ Next topic: LoadBalancer vs NodePort edge cases
 
 ```
 Exam Score: 72/100 (72%)
-Status: ✅ PASSED (66% threshold)
+Status: PASSED (66% threshold)
 Domain Breakdown:
   • Kubernetes Fundamentals: 90% (9/10)
   • Container Orchestration: 75% (15/20)

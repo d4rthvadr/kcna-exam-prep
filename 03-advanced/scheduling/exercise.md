@@ -1,10 +1,10 @@
 # Exercise: Scheduling & Resource Management - Pod Placement
 
-## 📌 Problem Statement
+## Problem Statement
 
 Control where Pods run and how resources are allocated in the cluster. You'll learn to use labels, node affinity, taints/tolerations, and resource constraints to ensure applications run on appropriate nodes and don't exhaust cluster resources.
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 By completing this exercise, you will be able to:
 
@@ -16,7 +16,7 @@ By completing this exercise, you will be able to:
 6. Understand resource allocation and scheduling decisions
 7. Debug scheduling failures
 
-## 📝 Exercises
+## Exercises
 
 ### Exercise 1.1: Labels and Selectors
 
@@ -763,9 +763,9 @@ Binds to best node
 
 ---
 
-## 💡 Best Practices
+## Best Practices
 
-✅ **DO:**
+DO:
 
 - Use labels consistently across applications
 - Set resource requests for better scheduling
@@ -773,7 +773,7 @@ Binds to best node
 - Use anti-affinity for distributed systems
 - Use taints only for special hardware/reserved nodes
 
-❌ **DON'T:**
+DON'T:
 
 - Forget to set resource requests (causes overprovisioning)
 - Use very high resource limits (waste capacity)
@@ -783,7 +783,7 @@ Binds to best node
 
 ---
 
-## ✅ Exercise Completion Checklist
+## Exercise Completion Checklist
 
 - [ ] Used labels to organize and filter resources
 - [ ] Labeled nodes and used node selector
@@ -803,6 +803,6 @@ Binds to best node
 
 Once complete, move to `lifecycle/exercise.md` to learn about health checks and pod lifecycle.
 
-## 📚 Reference
+## Reference
 
 Check `/templates/deployment-template.yaml` for resource configuration examples.

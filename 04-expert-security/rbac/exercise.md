@@ -406,7 +406,7 @@ kubectl auth can-i --list --as=system:serviceaccount:default:app-deployer
 ## Exercise 1.5: Understand RBAC Verbs and API Groups
 
 **Problem Statement:**
-You're reviewing a set of RBAC policies and need to understand what each verb permission actually allows. Create multiple Roles with different verbs (get, list, watch, create, update, patch, delete) and test the implications of each.
+You're reviewing a set of RBAC policies and need to understand what each verb permission allows. Create multiple Roles with different verbs (get, list, watch, create, update, patch, delete) and test the implications of each.
 
 **Learning Objectives:**
 

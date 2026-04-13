@@ -162,8 +162,8 @@ D) Pod D only (BestEffort QoS has lowest eviction priority)
 
 **Explanation:**
 
-- **Why D is correct:** Pod D has `requests==limits` (both set implicitly or explicitly), so it's Guaranteed QoS-wrong! Actually Pod D has NO limits specified, making it BestEffort QoS. BestEffort pods are evicted first when node under memory pressure.
-- **Actually:** Pods A, B, C are Burstable (request < limit, which defaults to none = unlimited), and Pod D is BestEffort. BestEffort (no requests/limits) is evicted first, then Burstable, lastGuaranteed.
+- **Why D is correct:** Pod D has NO limits specified, making it BestEffort QoS. BestEffort pods are evicted first when node is under memory pressure.
+- **QoS Class Hierarchy:** Pods A, B, C are Burstable (request < limit, which defaults to none = unlimited), and Pod D is BestEffort. BestEffort (no requests/limits) is evicted first, then Burstable, then Guaranteed.
 - **Why not A:** While Pod D is first, answer says "A only" which is technically correct (you asked which will evict FIRST, not all). But A is misleading since D is the one evicted for memory pressure.
 - **Why not B:** Kubelet doesn't evict based on actual-vs-requested ratio primarily; it evicts based on QoS class and actual usage within that class.
 - **Why not C:** Guaranteed QoS (request == limit) are NEVER evicted unless node is truly critical state.
@@ -384,7 +384,7 @@ D) The NetworkPolicy needs "Egress" policyType to block outbound
 - **Why C is correct:** The NetworkPolicy specifies only `policyTypes: ["Ingress"]`, which means "Deny all ingress, but ingress only." Egress is NOT restricted. However, DNS resolution failure suggests egress IS blocked, which means:
   - Either egress is implicitly denied separately (policies are additive, but this one doesn't specify egress)
   - OR there's a default-deny egress policy elsewhere
-  - Actually, if only Ingress policyType is specified, egress is allowed by default in most CNI implementations.
+  - If only Ingress policyType is specified, egress is allowed by default in most CNI implementations.
 - **Why not A:** Ingress policies don't affect outbound connections; that's egress.
 - **Why not B:** This is partially true (NetworkPolicy is namespace-scoped), but the pod can still reach services in other namespaces unless egress is restricted.
 - **Why not D:** If you want to block egress, need to add `Egress` policyType with rules.
@@ -445,7 +445,7 @@ strategy:
 **Options:**
 A) No, 5 - 1 = 4 replicas means minimum is met
 B) Yes, during max scaling (5 + 1 = 6) there's temporary resource waste, causing slowdowns
-C) No, rolling update doesn't actually pause requests
+C) No, rolling update doesn't pause requests
 D) Yes, but only during image pull phase before container starts
 
 **Answer: A (No, 4 replicas is maintained)**

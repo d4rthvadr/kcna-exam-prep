@@ -6,7 +6,7 @@
 **Prerequisites:** Module 01-03 completed  
 **KCNA Alignment:** Container Orchestration (46%), Cloud Native Architecture (16%)
 
-## 📚 Learning Objectives
+## Learning Objectives
 
 By completing this module, you will:
 
@@ -18,7 +18,7 @@ By completing this module, you will:
 - Understand Kubernetes security best practices
 - Troubleshoot permission and network connectivity issues
 
-## 📂 Exercise Breakdown
+## Exercise Breakdown
 
 | Exercise              | Topics                                                                              | Time     |
 | --------------------- | ----------------------------------------------------------------------------------- | -------- |
@@ -26,7 +26,7 @@ By completing this module, you will:
 | **network-policies/** | NetworkPolicies, traffic control, ingress/egress rules                              | 1 day    |
 | **security/**         | SecurityContexts, capabilities, RunAsUser, read-only filesystems                    | 0.5 day  |
 
-## 🎯 Key Concepts
+## Key Concepts
 
 ### RBAC Components
 
@@ -60,7 +60,7 @@ By completing this module, you will:
 - Core: "" (pods, services, etc.)
 - apps: (deployments, statefulsets, etc.)
 - batch: (jobs, cronjobs, etc.)
-- And many more...
+- And many more RBAC and NetworkPolicy scenarios
 
 ### NetworkPolicies
 
@@ -92,14 +92,14 @@ By completing this module, you will:
 - readOnlyRootFilesystem: Prevent writing to root filesystem
 - capabilities: Linux capability restrictions
 
-## 🚀 Getting Started
+## Getting Started
 
 1. Start with RBAC exercises (foundational for cluster security)
 2. Progress to NetworkPolicies (network-level isolation)
 3. Apply SecurityContexts to running containers
 4. Combine all three concepts in security scenarios
 
-## 💡 Tips
+## Tips
 
 - **RBAC is complex** - Understand the difference between Roles, RoleBindings, ClusterRoles first
 - **Test incrementally** - Create Role, then RoleBinding, then test with ServiceAccount
@@ -107,7 +107,7 @@ By completing this module, you will:
 - **Deny by default** - Use NetworkPolicies to explicitly allow traffic
 - **SecurityContext inheritance** - Pod-level settings apply to all containers unless overridden
 
-## 📖 Useful Commands (See cheatsheet.md for more)
+## Useful Commands (See cheatsheet.md for more)
 
 ```bash
 # ServiceAccounts
@@ -134,7 +134,7 @@ kubectl get pods -o wide  # See pod IPs for troubleshooting
 kubectl get pod <name> -o yaml  # See securityContext applied
 ```
 
-## ✅ Module Completion Checklist
+## Module Completion Checklist
 
 - [ ] Created ServiceAccounts and understood their role
 - [ ] Created Roles and RoleBindings

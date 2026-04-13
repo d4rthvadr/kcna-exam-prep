@@ -42,7 +42,7 @@ This guide provides practical tips for succeeding on the KCNA (Kubernetes and Cl
 **Week 1-2: Foundation & Beginner Modules**
 
 - Complete Module 01 exercises (Pods, Deployments, Services)
-- Hands-on practice is critical—don't just read, implement
+- Hands-on practice is critical; implement, don't just read
 - Verify each exercise works on your local cluster
 - Take notes on kubectl commands you use frequently
 
@@ -50,7 +50,7 @@ This guide provides practical tips for succeeding on the KCNA (Kubernetes and Cl
 
 - Complete Module 02 (ConfigMaps, Secrets, Storage)
 - Complete Module 03 (Scheduling, Lifecycle, Jobs)
-- Focus on understanding "why" not just "how"
+- Focus on understanding "why", not just "how"
 - Review common mistakes and gotchas
 
 **Week 3-4: Expert Modules & Review**
@@ -113,7 +113,7 @@ This guide provides practical tips for succeeding on the KCNA (Kubernetes and Cl
 
 1. **Read Carefully**: Key words matter (cannot, should, only, always, never)
 2. **Identify Question Type**: Factual vs. scenario vs. architecture
-3. **Eliminate Obviously Wrong**: Remove 1-2 obviously wrong answers first
+3. **Eliminate Wrong Answers**: Remove 1-2 clearly wrong answers first
 4. **Use Context Clues**: Read scenario carefully for hints
 5. **Don't Overthink**: If uncertain, mark and move on
 

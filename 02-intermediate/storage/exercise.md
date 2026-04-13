@@ -1,10 +1,10 @@
 # Exercise: Storage - Persistent Data Management
 
-## 📌 Problem Statement
+## Problem Statement
 
 Manage persistent data in Kubernetes using PersistentVolumes (PV), PersistentVolumeClaims (PVC), and StatefulSets. You'll learn how to decouple storage from applications, understand storage provisioning, and deploy stateful applications.
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 By completing this exercise, you will be able to:
 
@@ -17,7 +17,7 @@ By completing this exercise, you will be able to:
 7. Understand storage lifecycle and retention
 8. Debug storage-related issues
 
-## 📝 Exercises
+## Exercises
 
 ### Exercise 1.1: Create PersistentVolume (Local Storage)
 
@@ -621,9 +621,9 @@ parameters:
 
 ---
 
-## 💡 Best Practices
+## Best Practices
 
-✅ **DO:**
+DO:
 
 - Use PVC to decouple storage from Pods
 - Use StatefulSets for stateful applications
@@ -631,7 +631,7 @@ parameters:
 - Monitor storage usage
 - Plan capacity ahead
 
-❌ **DON'T:**
+DON'T:
 
 - Use local hostPath for production (nodes can fail)
 - Assume PV reclaim policy default (it's Retain)
@@ -641,7 +641,7 @@ parameters:
 
 ---
 
-## ✅ Exercise Completion Checklist
+## Exercise Completion Checklist
 
 - [ ] Created PersistentVolumes (local storage)
 - [ ] Created PersistentVolumeClaim
@@ -660,6 +660,6 @@ parameters:
 
 Once complete, move to **Module 03** (`03-advanced/scheduling/exercise.md`) to learn pod scheduling and affinity.
 
-## 📚 Reference Templates
+## Reference Templates
 
 Check `/templates/pvc-template.yaml` and see storage configuration patterns.

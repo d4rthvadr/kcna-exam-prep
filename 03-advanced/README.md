@@ -6,7 +6,7 @@
 **Prerequisites:** Module 01-02 completed  
 **KCNA Alignment:** Container Orchestration (46%), Cloud Native Architecture (16%)
 
-## 📚 Learning Objectives
+## Learning Objectives
 
 By completing this module, you will:
 
@@ -18,7 +18,7 @@ By completing this module, you will:
 - Manage Job and CronJob resources
 - Understand Pod lifecycle hooks (init containers, lifecycle handlers)
 
-## 📂 Exercise Breakdown
+## Exercise Breakdown
 
 | Exercise        | Topics                                                                              | Time     |
 | --------------- | ----------------------------------------------------------------------------------- | -------- |
@@ -26,7 +26,7 @@ By completing this module, you will:
 | **lifecycle/**  | Probes (liveness, readiness), init containers, lifecycle hooks                      | 0.5 day  |
 | **cronjobs/**   | Jobs, CronJobs, parallelism, completion                                             | 1 day    |
 
-## 🎯 Key Concepts
+## Key Concepts
 
 ### Labels & Selectors
 
@@ -81,7 +81,7 @@ By completing this module, you will:
 
 - Determines if Pod is ready to receive traffic
 - Service endpoints updated based on readiness
-- Use to delay traffic until Pod is actually ready
+- Use to delay traffic until Pod is ready
 
 ### Jobs & CronJobs
 
@@ -97,14 +97,14 @@ By completing this module, you will:
 - Similar to system cron jobs
 - Supports schedule, concurrency, and retention policies
 
-## 🚀 Getting Started
+## Getting Started
 
 1. Start with scheduling exercises (labels, affinity, resource limits)
 2. Apply lifecycle concepts to running Deployments
 3. Practice Jobs and CronJobs for batch workloads
 4. Combine all concepts in advanced scenarios
 
-## 💡 Tips
+## Tips
 
 - **Label strategically** - Use consistent naming for environment, team, version
 - **Start simple with affinity** - Use soft affinity (preferred) before hard requirements
@@ -112,7 +112,7 @@ By completing this module, you will:
 - **Test probes carefully** - Wrong probe configuration can cause pod restart loops
 - **Monitor Job completion** - Watch logs to debug failed Jobs
 
-## 📖 Useful Commands (See cheatsheet.md for more)
+## Useful Commands (See cheatsheet.md for more)
 
 ```bash
 # Labels and selectors
@@ -140,7 +140,7 @@ kubectl get pods -l job-name=<job-name>
 kubectl logs pod/<pod-name>
 ```
 
-## ✅ Module Completion Checklist
+## Module Completion Checklist
 
 - [ ] Used labels to organize and filter resources
 - [ ] Configured node affinity constraints
