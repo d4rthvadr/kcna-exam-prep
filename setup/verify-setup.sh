@@ -13,7 +13,7 @@ echo ""
 # Check kubectl
 echo "Checking kubectl..."
 if ! command -v kubectl &> /dev/null; then
-    echo "❌ kubectl not found"
+    echo "kubectl not found"
     exit 1
 fi
 echo "✅ kubectl installed"
@@ -21,7 +21,7 @@ echo "✅ kubectl installed"
 # Check cluster connectivity
 echo "Checking cluster connectivity..."
 if ! kubectl cluster-info &> /dev/null; then
-    echo "❌ Cannot connect to Kubernetes cluster"
+    echo "Cannot connect to Kubernetes cluster"
     echo "   Make sure your cluster is running (Docker Desktop, minikube, kind, etc.)"
     exit 1
 fi
@@ -31,39 +31,39 @@ echo "✅ Connected to cluster"
 echo "Checking cluster nodes..."
 node_count=$(kubectl get nodes --no-headers 2>/dev/null | wc -l)
 if [ "$node_count" -eq 0 ]; then
-    echo "❌ No nodes found in cluster"
+    echo "No nodes found in cluster"
     exit 1
 fi
-echo "✅ Found $node_count node(s)"
+echo "Found $node_count node(s)"
 
 # Check default namespace
 echo "Checking default namespace..."
 if ! kubectl get namespace default &> /dev/null; then
-    echo "❌ default namespace not found"
+    echo "default namespace not found"
     exit 1
 fi
-echo "✅ default namespace available"
+echo "default namespace available"
 
 # Check metrics-server (for HPA exercises)
 echo "Checking metrics-server..."
 if kubectl get deployment metrics-server -n kube-system &> /dev/null; then
     metrics_status=$(kubectl get deployment metrics-server -n kube-system -o jsonpath='{.status.readyReplicas}')
     if [ "$metrics_status" -gt 0 ]; then
-        echo "✅ metrics-server is ready"
+        echo "metrics-server is ready"
     else
-        echo "⚠️  metrics-server found but not yet fully ready (still initializing)"
+        echo "metrics-server found but not yet fully ready (still initializing)"
     fi
 else
-    echo "⚠️  metrics-server not installed (needed for HPA exercises)"
+    echo "metrics-server not installed (needed for HPA exercises)"
     echo "   Optional: Run ./setup/cluster-setup.sh to install"
 fi
 
 # Check API server responsiveness
 echo "Checking API server..."
 if kubectl version --short &> /dev/null; then
-    echo "✅ API server is responsive"
+    echo "API server is responsive"
 else
-    echo "❌ API server not responding"
+    echo "API server not responding"
     exit 1
 fi
 
@@ -91,7 +91,7 @@ echo "================================"
 echo "Verification Complete!"
 echo "================================"
 echo ""
-echo "✅ Your cluster is ready for KCNA exam prep exercises"
+echo "Your cluster is ready for KCNA exam prep exercises"
 echo ""
 echo "Quick test:"
 echo "  kubectl run test-pod --image=nginx:latest"

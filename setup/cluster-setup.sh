@@ -12,7 +12,7 @@ echo ""
 
 # Check if kubectl is installed
 if ! command -v kubectl &> /dev/null; then
-    echo "❌ kubectl is not installed. Please install kubectl first."
+    echo "kubectl is not installed. Please install kubectl first."
     echo "   macOS: brew install kubectl"
     echo "   Linux: curl -LO https://dl.k8s.io/release/stable.txt && curl -LO https://dl.k8s.io/release/v\$(cat stable.txt)/bin/linux/amd64/kubectl"
     exit 1
@@ -23,7 +23,7 @@ echo "✅ kubectl found: $(kubectl version --client -o json | grep -o '"gitVersi
 # Check if a cluster is accessible
 if ! kubectl cluster-info &> /dev/null; then
     echo ""
-    echo "❌ No Kubernetes cluster found."
+    echo "No Kubernetes cluster found."
     echo ""
     echo "Please start a local cluster using one of:"
     echo ""
@@ -57,9 +57,9 @@ echo ""
 # Check if metrics-server is installed
 echo "Checking for metrics-server (required for HPA)..."
 if kubectl get deployment metrics-server -n kube-system &> /dev/null; then
-    echo "✅ metrics-server is already installed"
+    echo "metrics-server is already installed"
 else
-    echo "⚠️  metrics-server not found. Installing..."
+    echo "metrics-server not found. Installing..."
     
     # Try to install metrics-server
     kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
@@ -68,14 +68,14 @@ else
     echo "Waiting for metrics-server to be ready..."
     kubectl wait --for=condition=ready pod -l k8s-app=metrics-server -n kube-system --timeout=300s || true
     
-    echo "✅ metrics-server installed"
+    echo "metrics-server installed"
 fi
 echo ""
 
 # Create required namespaces
 echo "Setting up namespaces..."
 kubectl create namespace default --dry-run=client -o yaml | kubectl apply -f -
-echo "✅ Namespaces ready"
+echo "Namespaces ready"
 echo ""
 
 # Display summary
